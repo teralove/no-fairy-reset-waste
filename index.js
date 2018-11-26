@@ -1,6 +1,6 @@
 module.exports = function NoFairyResetWaste(dispatch) {	
     
-    const FairyId = 271330;
+    const FairyId = [271310, 271330];
     const ResetDelay = 5000;
     
     let enabled = false,
@@ -19,14 +19,14 @@ module.exports = function NoFairyResetWaste(dispatch) {
     {
         if(!hooks.length)
         {            
-            hook('C_START_SKILL', 6, { order: -100 }, (event) => {              
-                if (event.skill.id === FairyId) {
+            hook('C_START_SKILL', 7, { order: -100 }, (event) => {
+                if (FairyId.includes(event.skill.id)) {
                     if (onCd) return false;
                 }
             });        
             
-            hook('S_CREST_MESSAGE', 2, { order: -100 }, (event) => {              
-                if (event.skill === FairyId) {
+            hook('S_CREST_MESSAGE', 2, { order: -100 }, (event) => {
+                if (FairyId.includes(event.skill)) {
                     onCd = true;
                     setTimeout(()=>{
                         onCd = false;
