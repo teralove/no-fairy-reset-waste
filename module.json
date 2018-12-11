@@ -1,5 +1,11 @@
 {
     "disableAutoUpdate": false,
+    "name": "no-fairy-reset-waste",
+    "author": "teralove",
+    "description": "Prevent casting Thrall of Life for 5 seconds after reset.",
+    "options": {
+        "niceName": "No Fairy Reset Waste"
+    },
     "servers": ["https://raw.githubusercontent.com/teralove/no-fairy-reset-waste/master/"],
     "supportUrl": "https://github.com/teralove/no-fairy-reset-waste/issues"
 }
