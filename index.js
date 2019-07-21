@@ -8,7 +8,7 @@ module.exports = function NoFairyResetWaste(dispatch) {
     gameId,
     onCd = false;
     
-    dispatch.hook('S_LOGIN', 10, event => {
+    dispatch.hook('S_LOGIN', 13, event => {
         gameId = event.gameId;
         enabled = (event.templateId - 10101) % 100 == 7 ? true : false;
         if (enabled) load();
